@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "DonLee Collection",
+  "description": "마동석 배우의 다양한 사진들을 만나보세요",
+  "version": "1.0",
+  "icons": {
+    "128": "/images/main.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "./images/main.png"
+  },
+
+  "permissions": ["unlimitedStorage", "notifications", "storage"]
+}
