@@ -17,7 +17,9 @@ window.onload = function () {
     "https://res.heraldm.com/content/image/2022/06/03/20220603000639_0.jpg",
     "https://blog.kakaocdn.net/dn/bJuO9x/btqDnxmhE18/FHYdlDahOwxtXaXBlNZD2K/img.jpg",
   ];
-  const button = document.querySelector<HTMLButtonElement>(".randomButton");
+  const randomButton =
+    document.querySelector<HTMLButtonElement>(".randomButton");
+  const sendButton = document.querySelector<HTMLButtonElement>(".sendButton");
 
   function initRandomImage() {
     const randomIndex = Math.floor(Math.random() * randomPhotos.length);
@@ -27,9 +29,81 @@ window.onload = function () {
     }
   }
 
-  button?.addEventListener("click", () => {
+  randomButton?.addEventListener("click", () => {
     initRandomImage();
   });
 
   initRandomImage();
+
+  sendButton?.addEventListener("click", () => {
+    sendImgUrl();
+  });
+
+  async function sendImgUrl() {
+    const today = new Date();
+    const discordUrl: string = process.env.API_URL as string;
+
+    const inputElement = document.getElementById(
+      "urlInput"
+    ) as HTMLInputElement;
+
+    const nicknameinputElement = document.getElementById(
+      "nicknameInput"
+    ) as HTMLInputElement;
+    const inputValue = inputElement?.value;
+    const nicknameinputValue = nicknameinputElement?.value;
+    if (!inputValue.length) {
+      window.alert("Url을 입력해주세요");
+      return;
+    }
+
+    if (randomPhotos.includes(inputValue)) {
+      window.alert("이미 존재하는 이미지입니다");
+      inputElement.value = "";
+      return;
+    }
+    if (!inputValue.startsWith("https://")) {
+      window.alert("이미지 형식만 입력 가능합니다");
+      inputElement.value = "";
+      return;
+    }
+
+    const data = {
+      content: `닉네임 : ${nicknameinputValue}`,
+      embeds: [
+        {
+          footer: {
+            text: "전송 시간",
+          },
+          timestamp: today,
+          image: {
+            url: inputValue,
+          },
+        },
+      ],
+    };
+
+    try {
+      await fetch(discordUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then((response) => {
+        if (response.ok) {
+          console.log(response.ok);
+          window.alert("이미지 전송 성공!");
+        } else {
+          window.alert("이미지 전송 실패!");
+        }
+      });
+    } catch (e: any) {
+      console.error("오류 발생:", e);
+      window.alert("이미지 전송 중 오류가 발생했습니다.");
+    } finally {
+      nicknameinputElement.value = "";
+      inputElement.value = "";
+    }
+  }
 };

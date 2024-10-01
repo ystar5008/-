@@ -12,11 +12,46 @@
   font-style: normal;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(61, 103, 250);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(61, 103, 250, 0.2);
+}
+
 body {
   margin: 0 auto;
   max-width: 400px;
   min-height: 400px;
   font-family: "Pretendard-Regular";
+  padding: 30px 0px;
+  position: relative;
+  color: #ffffff;
+}
+
+body::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5); /* 검정색으로 50% 투명도 */
+  background-blend-mode: multiply; /* 배경 이미지와 색상을 혼합 */
+  background: url("https://www.newsflix.co.kr/news/photo/202210/10542_9844_055.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: brightness(0.2);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 #container {
@@ -29,7 +64,6 @@ body {
   width: 100%;
   font-size: 24px;
   text-align: center;
-  margin-top: 30px;
 }
 
 #container p:nth-child(2) {
@@ -38,17 +72,44 @@ body {
   line-height: 1.2;
 }
 
-#container .randomButton {
+#container input {
+  margin-top: 12px;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+  border-width: 5px;
+  width: 300px;
+}
+
+#container input:focus {
+  border-color: #87a2ff;
+  outline: none;
+}
+
+#container input:first {
+  margin-top: 30px;
+}
+
+#container Button {
   margin: 0 auto;
   padding: 12px 20px;
   border-radius: 10px;
   margin-top: 20px;
-  background-color: #0a0a23;
+  background-color: #3d67fa;
   cursor: pointer;
-  transition: all;
-  color: #fff;
+  color: #f9f9f9;
   font-size: 20px;
   text-align: center;
+  transition: all 0.2s;
+}
+
+#container Button:hover {
+  transform: translate(-5px, -5px);
+}
+
+#container Button:active {
+  background-color: #1c4dfb;
 }
 
 #container .imageContainer {
@@ -61,4 +122,13 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+#container #sendUrlContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#container #sendUrlContainer .sendButton {
+  margin-top: 30px;
 }

@@ -14,11 +14,27 @@
   </head>
   <body>
     <div id="container">
-      <p>마동석 컬렉션</p>
-      <p>버튼을 누르면 마동석 <br />형님의 랜덤사진이 나옵니다</p>
+      <p class="title">✨ 마동석 컬렉션 ✨</p>
+      <p class="description">
+        버튼을 누르면 마동석 🤵 형님의 랜덤사진이 나옵니다!
+      </p>
+
       <button class="randomButton" type="button">랜덤사진</button>
       <div class="imageContainer">
         <img id="imageId" src="" alt="#" />
+      </div>
+      <div id="sendUrlContainer">
+        <button class="sendButton" type="button">이미지 주소 전송</button>
+        <input
+          id="nicknameInput"
+          type="text"
+          placeholder="닉네임을 입력해주세요"
+        />
+        <input
+          id="urlInput"
+          type="text"
+          placeholder="이미지 url을 입력해주세요"
+        />
       </div>
     </div>
   </body>
