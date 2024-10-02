@@ -2,32 +2,24 @@
 
 > 마동석 형님의 다양한 사진을 랜덤으로 볼 수 있는 크롬 익스텐션입니다.
 
-## Table of Contents
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Development](#development)
-- [Contributing](#contributing)
-- [License](#license)
+# 주요기능
 
-## Features
+- 🌙 **Dark Mode**: 사진 랜덤으로 보기
+- 🚫 **Ad-Blocking**: 추가하고싶은 url 전송하기
+ ![image](https://github.com/user-attachments/assets/7f22a3eb-c53a-4921-b9d2-fb8d06b1a82c)
 
-- 🌙 **Dark Mode**: Automatically switch to dark mode on supported websites.
-- 🚫 **Ad-Blocking**: Blocks intrusive ads and trackers to improve your browsing speed and privacy.
-- 📊 **Analytics Dashboard**: View detailed analytics of your browsing habits.
-- 🛠️ **Customizable**: Customize features to suit your needs.
 
-## Installation
+# 설치
 
-### From Chrome Web Store
+## From Chrome Web Store
 
-1. Go to the [Chrome Web Store](https://chrome.google.com/webstore).
-2. Search for **Awesome Chrome Extension**.
+1. 👉[설치링크](https://chromewebstore.google.com/detail/%EB%A7%88%EB%8F%99%EC%84%9D-%EB%9E%9C%EB%8D%A4-%EC%82%AC%EC%A7%84-%EC%BD%9C%EB%A0%89%EC%85%98/jbllomlgkfbkokkanmnmfbkoikciejcc?hl=ko&utm_source=ext_sidebar) 혹은 크롬 익스텐션에서 "마동석" 검색
+2. 확
 3. Click "Add to Chrome".
 4. Confirm by clicking "Add extension" in the pop-up window.
 
-### From Source Code (Manual Installation)
+# From Source Code (Manual Installation)
 
 1. Clone this repository:
    ```bash
