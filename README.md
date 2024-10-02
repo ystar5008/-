@@ -7,7 +7,10 @@
 
 - 🌙 **Dark Mode**: 사진 랜덤으로 보기
 - 🚫 **Ad-Blocking**: 추가하고싶은 url 전송하기
- ![image](https://github.com/user-attachments/assets/7f22a3eb-c53a-4921-b9d2-fb8d06b1a82c)
+![image](https://github.com/user-attachments/assets/64375d5c-d08b-46f8-88f2-e3ed37d4a5ce)
+![image](https://github.com/user-attachments/assets/2c6c248e-6ba3-4338-a73d-36b04330294e)
+![image](https://github.com/user-attachments/assets/04d92d14-fc43-4b8b-bab7-16b7c5a91ed4)
+
 
 
 # 설치
