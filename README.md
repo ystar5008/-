@@ -1,6 +1,6 @@
-# Awesome Chrome Extension 🚀
+# 마동석 랜덤 사진 콜렉션 🚀
 
-> A simple Chrome extension that enhances your browsing experience by providing awesome features like dark mode, ad-blocking, and much more.
+> 마동석 형님의 다양한 사진을 랜덤으로 볼 수 있는 크롬 익스텐션입니다.
 
 ## Table of Contents
 
