@@ -50,6 +50,14 @@ window.onload = function () {
         "https://cdn.news2day.co.kr/data2/content/image/2023/07/06/.cache/512/20230706500077.png",
         "https://res.heraldm.com/content/image/2022/06/03/20220603000639_0.jpg",
         "https://blog.kakaocdn.net/dn/bJuO9x/btqDnxmhE18/FHYdlDahOwxtXaXBlNZD2K/img.jpg",
+        "https://static.news.zumst.com/images/111/2019/12/18/79e418a8ae3b4e309dcead50f1634661.jpg",
+        "https://image-cdn.hypb.st/https%3A%2F%2Fkr.hypebeast.com%2Ffiles%2F2022%2F11%2Fdon-lee-the-roundup-no-way-out-filming-over-new-stills-revealed-ft.jpg?w=960&cbr=1&q=90&fit=max",
+        "https://image-cdn.hypb.st/https%3A%2F%2Fkr.hypebeast.com%2Ffiles%2F2023%2F06%2Fma-dong-seoks-favorite-quotes-from-himself-18-01.jpeg?q=75&w=800&cbr=1&fit=max",
+        "https://nimage.g-enews.com/phpwas/restmb_allidxmake.php?idx=5&simg=20230428174713096913b60030fa212113127174.jpg",
+        "https://flexible.img.hani.co.kr/flexible/normal/640/427/imgdb/original/2024/0416/20240416501721.jpg",
+        "https://img1.daumcdn.net/thumb/R1280x0/?fname=https://t1.daumcdn.net/brunch/service/user/cbly/image/rQwpJ_3MkxoInwX4tPXmlhFX4aA.png",
+        "https://i.ytimg.com/vi/pQUFCD45Qcw/maxresdefault.jpg",
+        "https://static.news.zumst.com/images/29/2019/05/02/268d1ad573cb44709211bcf2f942bf69.jpg",
     ];
     var randomButton = document.querySelector(".randomButton");
     var sendButton = document.querySelector(".sendButton");
@@ -57,7 +65,6 @@ window.onload = function () {
         var randomIndex = Math.floor(Math.random() * randomPhotos.length);
         if (img) {
             img.src = randomPhotos[randomIndex];
-            console.log("이미지변경");
         }
     }
     randomButton === null || randomButton === void 0 ? void 0 : randomButton.addEventListener("click", function () {
@@ -74,13 +81,17 @@ window.onload = function () {
                 switch (_a.label) {
                     case 0:
                         today = new Date();
-                        discordUrl = "https://discord.com/api/webhooks/1290539423238459393/2AmZ82yn5e81-mrDv0BeTQMWoSf1yS5L4-CSCQPKYIx-t-pzxDdfl-YgdQruiEejrmOL";
+                        discordUrl = process.env.API_URL;
                         inputElement = document.getElementById("urlInput");
                         nicknameinputElement = document.getElementById("nicknameInput");
                         inputValue = inputElement === null || inputElement === void 0 ? void 0 : inputElement.value;
                         nicknameinputValue = nicknameinputElement === null || nicknameinputElement === void 0 ? void 0 : nicknameinputElement.value;
+                        if (nicknameinputValue.length > 30) {
+                            window.alert("닉네임의 길이는 30자 이하여야 합니다.");
+                            return [2 /*return*/];
+                        }
                         if (!inputValue.length) {
-                            window.alert("Url을 입력해주세요");
+                            window.alert("URL을 입력해주세요");
                             return [2 /*return*/];
                         }
                         if (randomPhotos.includes(inputValue)) {
