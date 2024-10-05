@@ -81,7 +81,7 @@ window.onload = function () {
                 switch (_a.label) {
                     case 0:
                         today = new Date();
-                        discordUrl = process.env.API_URL;
+                        discordUrl = "https://discord.com/api/webhooks/1290539423238459393/2AmZ82yn5e81-mrDv0BeTQMWoSf1yS5L4-CSCQPKYIx-t-pzxDdfl-YgdQruiEejrmOL";
                         inputElement = document.getElementById("urlInput");
                         nicknameinputElement = document.getElementById("nicknameInput");
                         inputValue = inputElement === null || inputElement === void 0 ? void 0 : inputElement.value;

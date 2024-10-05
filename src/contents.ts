@@ -48,7 +48,8 @@ window.onload = function () {
 
   async function sendImgUrl() {
     const today = new Date();
-    const discordUrl: string = process.env.API_URL as string;
+    const discordUrl: string =
+      "https://discord.com/api/webhooks/1290539423238459393/2AmZ82yn5e81-mrDv0BeTQMWoSf1yS5L4-CSCQPKYIx-t-pzxDdfl-YgdQruiEejrmOL";
 
     const inputElement = document.getElementById(
       "urlInput"
